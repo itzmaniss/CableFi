@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <title>{% block title %}{% endblock %}</title>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+                        .horizontal-border{
+                background-color: black;
+                height: 34px; 
+                width: 100%;
+            } 
+            .tb{
+                cursor:pointer;
+                background: transparent;
+            }
+            .bar{
+                cursor: pointer;
+                background: transparent;
+                display: block;
+                block-size: auto;
+                width: 10vw; 
+                color: white;
+                padding: 5px;
+                text-align: center;
+            }
+            li{
+                display: inline-block;
+            }
+        </style>
+        {% block header %} {% endblock %}
+    </head>
+    
+    <body>
+        <div class="horizontal-border">
+            <ul>
+            <li><form action = "{{url_for('home', user = user)}}" method = "POST"><input type="submit" value = "HOME" class = "bar"></form></li>
+            <li><form action = "{{url_for('typec', user = user)}}" method = "POST"><input type = "submit" value = "Type C" class = "bar"></form></li>
+            <li><form action = "{{url_for('ethernet', user = user)}}" method = "POST"><input type= "submit" value = "Ethernet" class = "bar"></form></li>
+            <li><form action = "{{url_for('iphone', user = user)}}" method = "POST"><input type = "submit" value = "Iphone Cables" class = "bar"></form></li>    
+            <li><form action = "{{url_for('micro', user = user)}}" method = "POST"><input type = "submit" value = "Micro USB" class = "bar"></form></li>
+            <li><form action = "{{url_for('audio', user = user)}}" method = "POST"><input type = "submit" value = "Audio" class = "bar"></form></li>
+            <li><form action = "{{url_for('hdmi', user = user)}}" method = "POST"><input type = "submit" value = "HDMI" class = "bar"></form></li>
+            <li><form action = "{{url_for('logout', user = user)}}" method = "POST"><input type = "submit" value = "logout" class = "bar"></form></li>
+            <li><form action = "{{url_for('cart', user = user)}}" method = "POST"><input type = "submit" value = "cart" class = "bar"></form></li>
+            </ul>
+        </div>
+        <br><br><br><br>
+        <div>
+        {% block body %} {% endblock %}
+        </div>
+
+    </body>
+</html>

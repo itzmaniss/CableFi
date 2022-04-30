@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <title>{% block title %}{% endblock %}</title>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet", type="text/css" href="{{url_for('static', filename='styles.css')}}">
+        <link rel = "stylesheet" href = "styles.css">
+        {% block header %} {% endblock %}
+    </head>
+    
+    <body>
+        <div class="horizontal-border">
+            <ul>
+            <li><form action = "{{url_for('home')}}" method = "POST"><input type="submit" value = "HOME" class = "bar"></form></li>
+            <li><form action = "{{url_for('typec')}}" method = "POST"><input type = "submit" value = "Type C" class = "bar"></form></li>
+            <li><form action = "{{url_for('ethernet')}}" method = "POST"><input type= "submit" value = "Ethernet" class = "bar"></form></li>
+            <li><form action = "{{url_for('iphone')}}" method = "POST"><input type = "submit" value = "Iphone Cables" class = "bar"></form></li>    
+            <li><form action = "{{url_for('micro')}}" method = "POST"><input type = "submit" value = "Micro USB" class = "bar"></form></li>
+            <li><form action = "{{url_for('audio')}}" method = "POST"><input type = "submit" value = "Audio" class = "bar"></form></li>
+            <li><form action = "{{url_for('hdmi')}}" method = "POST"><input type = "submit" value = "HDMI" class = "bar"></form></li>
+            <li><form action = "{{url_for('fibre')}}" method = "POST"><input type = "submit" value = "Fibre Optics" class = "bar"></form></li>
+            <li><form action = "{{url_for('logout')}}" method = "POST"><input type = "submit" value = "logout" class = "bar"></form></li>
+            </ul>
+        </div>
+        <br><br><br><br>
+        <div>
+            <div>
+                <ul>
+                    <li>
+                        <input type ="image" src = "{{url_for('static',filename = 'typec.png')}}">
+                        <br>
+                        <form action = "add" method = "POST">
+                            <input type="number" name = "Quantity" min = "1" max = "5" value="0">
+                            <select name="colour">
+                                <option value="Black"selected="selected">Black</option>
+                                <option value="Blue" style=" color: blue;">Blue</option>
+                                <option value="Red" style="color: red;">Red</option>
+                            </select>
+                            <input type = "submit" value = "add to cart">
+                            <input type = "hidden" name = "site" value = "/typec">
+                            <input type = "hidden" name = "item" value = "0.5mtypec">       
+                        </form>
+                    </li>
+                    <li>
+                        <input type = "image" src = "{{url_for('static', filename = 'typec.png')}}" >
+                        <br>
+                        <form action= "add" method = "POST">
+                            <input type = "number" name = "Quantity" min = "1" max = "5" value = "0">
+                            <select name="colour">
+                                <option value="Black"selected="selected">Black</option>
+                                <option value="Blue" style=" color: blue;">Blue</option>
+                                <option value="Red" style="color: red;">Red</option>
+                            </select>
+                            <input type = "submit" value = "add to cart">
+                            
+                            <input type="hidden" name = "site" value = "/typec">
+                            <input type = "hidden" name = "item" value = "1mtypec">
+                        </form>
+                    </li>
+                    <li>
+                        <input type = "image" src = "{{url_for('static', filename = "" )}}">
+                        <br>
+                        <form action = "add" method = "POST">
+                            <input type = "number" name = "Quantity" min = "1" max = "5"value="0">
+                            <select name="colour">
+                                <option value="Black"selected="selected">Black</option>
+                                <option value="Blue" style="color:Blue;">Blue</option>
+                                <option value="Red" style="color: red;">Red</option>
+                            </select>
+                            <input type = "submit" value = "add to cart">
+                            <input type = "hidden" name = "item" value = "1.5M typec">
+                            <input type = "hidden" name = "site" value = "/typec">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+             
+        </div>
+
+    </body>
+</html>

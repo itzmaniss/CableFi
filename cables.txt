@@ -1,0 +1,13 @@
+1. Type C
+2. Ethernet
+3. Lightning aka iphone
+4. Micro USB
+5. Audio
+6. HDMI
+7. Fibre Optic --> SCRAPED
+8. Dongles --> SCRAPED
+
+
+SCRAPED is because i did not see a feasible use for such cables in a daily
+consumers cable store. Fibre optics usually sourceb by telcos and lets be honest
+people prefer airpods to Dongles

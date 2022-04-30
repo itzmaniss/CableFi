@@ -1,0 +1,22 @@
+.horizontal-border{
+    background-color: black;
+    height: 34px; 
+    width: 100%;
+} 
+.tb{
+    cursor:pointer;
+    background: transparent;
+}
+.bar{
+    cursor: pointer;
+    background: transparent;
+    display: block;
+    block-size: auto;
+    width: 9vw; 
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+li{
+    display: inline-block;
+}

@@ -1,0 +1,70 @@
+{% extends "layout.html" %} 
+
+{% block title %} 
+
+Ethernet cables
+
+{% endblock %}
+
+{% block header %}
+
+<h1><center>SHOP Ethernet Cables!</center></h1>
+
+{% endblock %}
+
+{% block body %}
+
+<div>
+    <ul>
+        <li>
+            <input type ="image" src = "{{url_for('static',filename = '1ethernet.png')}}">
+            <br>
+            <form action = "{{url_for('add', user = user)}}" method = "POST">
+                <input type="number" name = "Quantity" min = "1" max = "5" value="0">
+                <select name="colour">
+                    <option value="Black"selected="selected">Black</option>
+                    <option value="Blue" style=" color: blue;">Blue</option>
+                    <option value="Red" style="color: red;">Red</option>
+                </select>
+                <input type = "submit" value = "add to cart">
+                <input type = "hidden" name = "site" value = "ethernet">
+                <input type = "hidden" name = "item" value = "1.0M ethernet">       
+            </form>
+        </li>
+        <li>
+            <input type = "image" src = "{{url_for('static', filename = '5ethernet.png')}}" >
+            <br>
+            <form action= "{{url_for('add', user = user)}}" method = "POST">
+                <input type = "number" name = "Quantity" min = "1" max = "5" value = "0">
+                <select name="colour">
+                    <option value="Black"selected="selected">Black</option>
+                    <option value="Blue" style=" color: blue;">Blue</option>
+                    <option value="Red" style="color: red;">Red</option>
+                </select>
+                <input type = "submit" value = "add to cart">
+                
+                <input type="hidden" name = "site" value = "ethernet">
+                <input type = "hidden" name = "item" value = "5.0M ethernet">
+            </form>
+        </li>
+        <li>
+            <input type = "image" src = "{{url_for('static', filename = '10ethernet.png')}}">
+            <br>
+            <form action = "{{url_for('add', user = user)}}" method = "POST">
+                <input type = "number" name = "Quantity" min = "1" max = "5"value="0">
+                <select name="colour">
+                    <option value="Black"selected="selected">Black</option>
+                    <option value="Blue" style="color:Blue;">Blue</option>
+                    <option value="Red" style="color: red;">Red</option>
+                </select>
+                <input type = "submit" value = "add to cart">
+                <input type = "hidden" name = "item" value = "10.0M ethernet">
+                <input type = "hidden" name = "site" value = "ethernet">
+            </form>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}
+
+

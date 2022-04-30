@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+{% extends "layout.html" %}
+
+{% block title %}
+
+test
+
+{% endblock %}
+
+{% block header %} 
+
+<h1 style = "color: red;">
+    <center>
+        TESTING IN PROGRESS
+    </center>
+</h1>
+
+{% endblock %}
+
+{% block body %}
+
+<input type = "image" src = "{{url_for('static', filename = 'typec.png')}}" >
+<br>
+<form action= "update" method = "POST">
+    <input type = "number" name = "quantity" min = "0" max = "5" value = "0">
+    <input type = "submit" value = "update cart">
+    
+    <input type="hidden" name = "site" value = "/typec">
+    <input type = "hidden" name = "item" value = "0.5mtypec">
+</form>
+
+{% endblock %}
+
+</html>

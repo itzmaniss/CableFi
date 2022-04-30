@@ -1,0 +1,68 @@
+25 April 2022
+
+Completed Login Page
+Completed Sign up Page
+Server works for Login
+Sign up page needs to be straightened out
+
+26 April 2022
+
+Completed sign up page with the  help of keevs
+found out could just use double colon for sql; query :/ why you do this to me MR tan
+Completed a few html files 
+- error
+- erroruid
+- layout hopefully
+
+28 April 2022
+
+Fixed the bug i faced with add() --> i was missing a '' in the query. NOTE : when using where after '=' the variable must be inside ''
+
+for update()
+- made udpate(), was relatively easy once i figured what was wrong with add() --> yet to check  -->Tested workss
+- changed update to be more logicall
+- i put update to increase or decrease by a value.. why would i do that?! 
+- luckily i realised how dumb that was and changed it to update to set quantity
+- realising i should be deleting if quantity is set to 0 BRB --> DONE
+
+for cart()
+- started off slow, procrastinanted a while, very little comparitively 
+- completed cart() with ease
+- however i had an intermediate thought process --> price in sql should be total not for single piece 
+if note it will be a hassle to deal with while displaying cart --> to implement later 
+- yet to start on html for this page. should be more competetive than other pages as ill be traversing into
+jinja codes, which i have mostly avoided 
+
+- did my html. Yes its plain but it took a while for me to understand what i had to do 
+and so i am proud of the page. What more do people want from cart anyways?
+- However i am facing an error 404. Tryna find out where it is occuring and hopefully fix it. Pls dont take long
+- FIXED wrong name in html jinja.
+
+
+29 April 2022
+
+Did some code to import price of individual items from database.
+Decided to import everything at the start and keep as a dictionary. 
+
+YET TO DO:
+- I want to change cart database to state total price instead of individual price
+- Name all the products i want to sell in a dictionary with the value as price. -> use this to upload into 
+database later on.
+
+Thats all for today i guess. Alr 9pm and super tired.
+
+UPDATES:
+- 
+
+30 April 2022
+
+LAST DAY i am allocating for web app. Tomorrow is too full to have any work done.
+
+SIDE THOUGHTS:
+realised i did not know how to send data to html from python... OOPS
+
+time to ask someone for help.., probably swamp --> side note swarup is an idiot 
+
+Figured out from notes  quite easy actually
+
+learned abt request.form.getlist()

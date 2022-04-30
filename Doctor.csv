@@ -1,0 +1,9 @@
+Doctor_Id,Doctor_Name,Hospital_Id,Joining_Date,Speciality,Salary,Experience
+101,David,1,10/2/2005,Pediatric,40000,15
+102,Michael,1,23/7/2018,Oncologist,20000,2
+103,Susan,2,19/5/2016,Garnacologist,25000,4
+104,Robert,2,28/12/2017,Pediatric,28000,3
+105,Linda,3,4/6/2004,Garnacologist,42000,16
+106,William,3,11/9/2012,Dermatologist,30000,8
+107,Richard,4,21/8/2014,Garnacologist,32000,6
+108,Karen,4,17/10/2011,Radiologist,30000,9

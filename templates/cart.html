@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block title %} 
+CART 
+{% endblock %}
+
+{% block header %} 
+<h1>
+    <center>
+        YOUR CART
+    </center>
+</h1>
+{% endblock %} 
+
+{% block body %} 
+<center>
+<table border="1px">
+    <thead>
+        <tr>
+            <th>Cable     </th>   
+            <th>Colour    </th>
+            <th>Quantity  </th>
+            <th>Price     </th>
+            <th>          </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+        <tr>
+            <form action = "{{url_for('update', user = user)}}" method = "POST">
+            <td>{{item[0]}}</td>
+            <td>{{item[1]}}</td>    
+            <td><input type = "number" name = "quantity" min = "0" max = "10" value = '{{item[2]}}' ></td>
+            <td>{{item[3]}}</td>
+            <td><input type="submit" value = "update cart"></td>
+            <input type= "hidden" name = "item"  value = '{{item[0]}}'>
+            <input type = "hidden" name = "initial" value = "{{item[2]}}">
+            <input type = "hidden" name = "Colour" value = '{{item[1]}}'>
+            </form>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</center>
+
+    {% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <H1>
+            <center>Login Page</center>
+        </H1>
+    </head>
+
+    <body>
+
+        <form action = "{{url_for('verification')}}" method = "POST">
+
+            <p>
+                Username:<Input type="Text" name="Username" size="15" maxlength="30">
+            </p>
+        
+            <p>
+                Password: <input type="password" name="Password" size="15" maxlength="30">
+            </p>
+
+            <input type="submit" value="Start Shopping!">
+
+        </form>
+        
+        <form action="{{url_for('signup')}}" method = "POST">
+            If you dont have an account, click <input type = "submit" name = "signup" value = "here"> to sign up
+        </form>
+        
+        
+        <br>
+
+        
+
+    </body>
+    
+
+</html>
